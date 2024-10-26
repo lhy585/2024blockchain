@@ -3,18 +3,19 @@ pragma solidity ^0.8.20;
 
 // Uncomment the line to use openzeppelin/ERC721,ERC20
 // You can use this dependency directly because it has been installed by TA already
-// import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-// import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 // Uncomment this line to use console.log
 // import "hardhat/console.sol";
 import "./MyERC20.sol";
-contract BuyMyRoom {
+contract BuyMyRoom is ERC721{
 
     // use a event if you want
     // to represent time you can choose block.timestamp
     event HouseListed(uint256 tokenId, uint256 price, address owner);
     MyERC20 public myERC20; // 彩票相关的代币合约
+
     
     // maybe you need a struct to store car information
     struct House {
@@ -27,7 +28,7 @@ contract BuyMyRoom {
     address public manager;
 
     // 合约构造函数，在合约部署时初始化管理者
-    constructor() {
+    constructor() ERC721("HNFT", "HT") {
         manager = msg.sender; // 将合约创建者设为管理者
         myERC20 = new MyERC20("ZJUToken", "ZJUTokenSymbol");
         for(uint256 i=0;i<10;i++){

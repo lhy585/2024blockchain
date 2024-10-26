@@ -303,6 +303,9 @@ const HomePage = () => {
                         <img src={`/house${houseList[i].id}.jpeg`} style={{ width: '300px', height: 'auto' }}/> <br />
                         房屋ID: {houseList[i].id.toString()}<br />
                         是否正在出售：{houseList[i].price==0?'否':'是'}<br />
+                        {
+                            houseList[i].price==0||<div>     价格为：{houseList[i].price.toString()}</div>
+                        }
                         <input
                             type="number"
                             placeholder="输入出售价格"
