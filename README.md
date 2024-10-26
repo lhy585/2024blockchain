@@ -103,9 +103,11 @@ Bonus:   使用ERC20来购买房屋，通过空降的方式给每个用户初始
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 ![alt text](image-5.png)
-##### 交互的截图
+##### 与本地测试链交互的截图
 ![alt text](image-9.png)
 ![alt text](image-10.png)
+##### 与钱包交互
+![alt text](image-13.png)
 ## 参考内容
 
 - 课程的参考Demo见：[DEMOs](https://github.com/LBruyne/blockchain-course-demos)。
