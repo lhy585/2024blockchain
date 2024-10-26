@@ -20,6 +20,7 @@ describe("Test", function () {
     it("Should return hello world", async function () {
       const { buyMyRoom } = await loadFixture(deployFixture);
       expect(await buyMyRoom.helloworld()).to.equal("hello world");
+      expect(await buyMyRoom.buyHouse(0)).to.equal('');
     });
   });
 });
