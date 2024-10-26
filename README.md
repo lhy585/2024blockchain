@@ -114,6 +114,7 @@ Bonus:   使用ERC20来购买房屋，通过空降的方式给每个用户初始
 
 - 如何实现ETH和ERC20的兑换？ [参考讲解](https://www.wtf.academy/en/docs/solidity-103/DEX/)
   
-- 如何实现页面刷新时保留上一次的变量的值？    使用localstorage[CSDN.com]
+- 如何实现页面刷新时保留上一次的变量的值？    使用localstorage[CSDN.com]   
+- react的组件、控制如何使组件有条件的显示等    [csdn.com]
 
 <!-- 如果有其它参考的内容，也请在这里陈列。 -->
