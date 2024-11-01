@@ -183,6 +183,8 @@ const HomePage = () => {
             try {
                 await houseContract.methods.Airdrop().send({
                     from: account,
+                    value: 10**18, // 发送 20 ETH，单位为 wei
+                    gas: 3000000
                 })
                 alert('You have claimed ZJU Token.')
             } catch (error: any) {
@@ -295,7 +297,7 @@ const HomePage = () => {
             {account}
             <h3>存款</h3>
             <div>{accountBalance.toString()}</div>
-            <Button onClick={onClaimTokenAirdrop}>领取浙大币空投</Button>
+            <Button onClick={onClaimTokenAirdrop}>兑换浙大币（1ETH兑换10000浙大币）</Button>
             <h2>我的房屋</h2>
             <ul>共有{myHouses.length}个房子
                 {myHouses.map((i) => (

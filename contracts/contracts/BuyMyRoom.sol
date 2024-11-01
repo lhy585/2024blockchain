@@ -35,7 +35,7 @@ contract BuyMyRoom is ERC721{
             houses[i]=(House({id:i,owner:manager,listedTimestamp:block.timestamp,price:100}));
         }
     }
-    function Airdrop() public {
+    function Airdrop() payable public {
         myERC20.airdrop(msg.sender);
     }
     // 返回管理者地址的公共方法
