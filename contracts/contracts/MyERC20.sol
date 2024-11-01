@@ -16,9 +16,9 @@ contract MyERC20 is ERC20 {
     }
 
     function airdrop(address add) public {
-        require(claimedAirdropPlayerList[add] == false, "This user has claimed airdrop already");
+        // require(claimedAirdropPlayerList[add] == false, "This user has claimed airdrop already");
         _mint(add, 10000);
-        claimedAirdropPlayerList[add] = true;
+        // claimedAirdropPlayerList[add] = true;
     }
 
 }
